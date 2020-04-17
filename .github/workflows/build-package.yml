@@ -23,5 +23,9 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+  package:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
     - name: Pack
       run: dotnet pack src/LogAnalytics.Collector.fsproj --configuration Release --no-build
