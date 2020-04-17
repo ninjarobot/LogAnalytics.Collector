@@ -24,6 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
   package:
+    needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
