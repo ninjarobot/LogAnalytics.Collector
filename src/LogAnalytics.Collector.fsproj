@@ -5,7 +5,7 @@
     <Title>LogAnalytics.Collector</Title>
     <Authors>Dave Curylo</Authors>
     <Description>Log Analytics Collector can sign and build messages to send structured logging data to an Azure Log Analytics workspace.</Description>
-    <Copyright>Dave Curylo</Copyright>
+    <Copyright>2020 Dave Curylo</Copyright>
     <PackageProjectUrl>https://github.com/ninjarobot/LogAnalytics.Collector</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/ninjarobot/LogAnalytics.Collector</RepositoryUrl>
