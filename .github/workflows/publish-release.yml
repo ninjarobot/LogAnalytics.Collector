@@ -15,10 +15,5 @@ jobs:
           dotnet-version: 3.1.101
       - name: Pack
         run: dotnet pack src/LogAnalytics.Collector.fsproj --configuration Release -o pkg -p:Version=${GITHUB_REF#refs/tags/} -p:PackageVersion=${GITHUB_REF#refs/tags/}
-      - name: Publish artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: nupkg
-          path: pkg
       - name: Publish package
-        run: dotnet nuget push nupkg\*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://nuget.org
+        run: dotnet nuget push pkg\*.nupkg -k ${{ secrets.NUGET_KEY }} -s https://nuget.org
