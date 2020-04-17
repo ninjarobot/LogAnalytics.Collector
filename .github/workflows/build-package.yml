@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
-      run: dotnet pack LogAnalytics.Collector --configuration Release --no-build
+      run: dotnet pack src/LogAnalytics.Collector.fsproj --configuration Release --no-build
